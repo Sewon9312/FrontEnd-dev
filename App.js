@@ -14,7 +14,9 @@ import {
 } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import MapScreen from './screens/MapScreen';
+// import MapScreen from './screens/MapScreen';
+import LoginScreen from './src/screens/LoginScreen';
+import SignUpScreen from './src/screens/SignUpScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -23,7 +25,9 @@ export default function App() {
     <SafeAreaView style={styles.safearea}>
       <NavigationContainer>
         <Stack.Navigator>
-          <Stack.Screen name="Map" component={MapScreen}></Stack.Screen>
+          <Stack.Screen name="Login" component={LoginScreen} options={{ headerShown: false }} />
+          <Stack.Screen name="SignUp" component={SignUpScreen} options={{ headerShown: false }} />
+          {/* <Stack.Screen name="Map" component={MapScreen}></Stack.Screen> */}
         </Stack.Navigator>
       </NavigationContainer>
     </SafeAreaView>
